@@ -59,9 +59,8 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.78
 
 .hero { border-bottom: 1px solid var(--line); margin-top: 3.5rem; padding-bottom: 2rem; }
 .hero .role { color: var(--accent); font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; margin-bottom: 1.3rem; }
-.profile-photo { border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); float: left; height: 180px; margin: 0.3rem 1.7rem 1rem 0; object-fit: cover; width: 180px; }
-.hero p.lede { color: var(--soft); margin-bottom: 1.5rem; max-width: 780px; }
-.stats { clear: left; padding-top: 0.5rem; }
+.hero p.lede { color: var(--soft); margin-bottom: 1.5rem; max-width: 900px; }
+.stats { padding-top: 0.5rem; }
 .stats .stat { display: inline-block; margin-bottom: 1rem; margin-right: 2.5rem; }
 .stat b { color: var(--bright); display: block; font-size: 1.5rem; }
 .stat span { color: var(--muted); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
@@ -132,8 +131,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.78
 @media (max-width: 560px) {
   main { padding-top: 2.5rem; }
   .castle-hero { min-height: 460px; padding: 1.5rem; }
-  .profile-photo, .hobby-card, .skill-card, .gallery-item, .quicklinks a { float: none; margin-right: 0; width: 100%; }
-  .profile-photo { display: block; margin-bottom: 1.4rem; }
+  .hobby-card, .skill-card, .gallery-item, .quicklinks a { float: none; margin-right: 0; width: 100%; }
   .quicklinks a { margin-bottom: 0.7rem; }
   .hobby-card, .skill-card { min-height: 0; margin-bottom: 1rem; }
   .gallery-item, .gallery-item:nth-child(3n) { margin-bottom: 1rem; margin-right: 0; }
