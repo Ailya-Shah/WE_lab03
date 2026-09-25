@@ -41,7 +41,7 @@ portfolio/
 
 ## Live Site
 
-Deployed via GitHub Pages: `https://<username>.github.io/portfolio/`
+Deployed via GitHub Pages: `https://ailya-shah.github.io/WE_lab03/`
 
 ## Author
 
