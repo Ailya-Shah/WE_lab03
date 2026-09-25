@@ -1,0 +1,437 @@
+/* =========================================================
+   CS313 - Web Engineering - Lab 3
+   Ailya Shah - Personal Portfolio II
+   Single external stylesheet for all 5 pages.
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #060c22;
+  color: #c6cdec;
+  line-height: 1.7;
+}
+
+a {
+  color: #b0c7ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* ===== Clearfix helper (used wherever floats are involved) ===== */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ===== Header / Navigation ===== */
+header.site-header {
+  background: #000000;
+  border-bottom: 1px solid rgba(176, 199, 255, 0.16);
+  padding: 1rem 1.5rem;
+}
+
+nav {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+nav .brand {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #eef2ff;
+  float: left;
+  line-height: 2rem;
+}
+
+/* Horizontal nav menu built with float + clear, as required by the lab */
+nav ul {
+  list-style: none;
+  float: right;
+}
+
+nav ul li {
+  float: left;
+  margin-left: 1.4rem;
+}
+
+nav ul li a {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a3adda;
+  line-height: 2rem;
+}
+
+nav ul li a.active {
+  color: #b0c7ff;
+  border-bottom: 1px solid #b0c7ff;
+}
+
+/* clear the float so the header doesn't collapse */
+nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ===== Page layout ===== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+h1 {
+  color: #eef2ff;
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.sub {
+  color: #7b86bb;
+  margin-bottom: 2.2rem;
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #7b86bb;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(176, 199, 255, 0.16);
+  margin-top: 3rem;
+}
+
+/* ===== Home page: profile photo floated beside bio text ===== */
+.hero .role {
+  color: #b0c7ff;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 1.3rem;
+}
+
+.profile-photo {
+  float: left;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  margin: 0.3rem 1.5rem 1rem 0;
+}
+
+.hero p.lede {
+  color: #a3adda;
+  margin-bottom: 1.5rem;
+}
+
+/* stop following content from wrapping around the floated photo */
+.stats {
+  clear: left;
+  padding-top: 0.5rem;
+}
+
+.stats .stat {
+  display: inline-block;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.stat b {
+  display: block;
+  font-size: 1.5rem;
+  color: #eef2ff;
+}
+
+.stat span {
+  font-size: 0.8rem;
+  color: #7b86bb;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.links a {
+  display: inline-block;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #a3adda;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.links a:hover {
+  border-color: #b0c7ff;
+  color: #b0c7ff;
+}
+
+.panel {
+  clear: both;
+  background: #0b1738;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  border-radius: 12px;
+  padding: 1.6rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.panel h2 {
+  color: #eef2ff;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.panel p {
+  color: #a3adda;
+  font-size: 0.95rem;
+}
+
+.quicklinks {
+  clear: both;
+}
+
+.quicklinks a {
+  display: block;
+  float: left;
+  width: 21%;
+  margin-right: 4%;
+  background: #0b1738;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  border-radius: 10px;
+  padding: 1.1rem 0.6rem;
+  color: #eef2ff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.quicklinks a:last-child {
+  margin-right: 0;
+}
+
+.quicklinks a:hover {
+  border-color: #b0c7ff;
+  color: #b0c7ff;
+}
+
+/* ===== Hobbies page: floated cards, two per row ===== */
+.hobby-card {
+  float: left;
+  width: 47%;
+  margin: 0 3% 1.5rem 0;
+  background: #0b1738;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  border-top: 3px solid #b0c7ff;
+  border-radius: 12px;
+  padding: 1.4rem;
+}
+
+.hobby-card:nth-child(even) {
+  margin-right: 0;
+}
+
+.hobby-card h2 {
+  color: #eef2ff;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.hobby-card p {
+  color: #a3adda;
+  font-size: 0.92rem;
+}
+
+/* ===== Skills page ===== */
+.skill-card {
+  float: left;
+  width: 31%;
+  margin: 0 3.5% 1.5rem 0;
+  background: #0b1738;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  border-top: 3px solid #b0c7ff;
+  border-radius: 12px;
+  padding: 1.4rem;
+}
+
+.skill-card:last-child {
+  margin-right: 0;
+}
+
+.skill-card.fluent { border-top-color: #74e0ff; }
+.skill-card.working { border-top-color: #f4c56a; }
+.skill-card.exploring { border-top-color: #c3a4ff; }
+
+.skill-card h2 {
+  color: #eef2ff;
+  font-size: 1.05rem;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skill-card ul {
+  list-style: none;
+}
+
+.skill-card li {
+  color: #a3adda;
+  font-size: 0.9rem;
+  padding: 0.2rem 0;
+}
+
+.skill-card li::before {
+  content: "\2014 ";
+  color: #7b86bb;
+}
+
+.lang-panel {
+  clear: both;
+  background: #0b1738;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.lang-panel h2 {
+  color: #eef2ff;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.lang-panel li {
+  display: inline-block;
+  color: #a3adda;
+  font-size: 0.9rem;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  margin: 0 0.5rem 0.5rem 0;
+  list-style: none;
+}
+
+/* ===== Gallery page: images floated into a grid ===== */
+.gallery-item {
+  float: left;
+  width: 31%;
+  margin: 0 3.5% 1.6rem 0;
+  background: #0b1738;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gallery-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.gallery-item .caption {
+  padding: 0.9rem 1rem;
+}
+
+.gallery-item .title {
+  color: #eef2ff;
+  font-weight: bold;
+  font-size: 0.92rem;
+  margin-bottom: 0.25rem;
+}
+
+.gallery-item .desc {
+  color: #a3adda;
+  font-size: 0.8rem;
+}
+
+/* ===== Contact page ===== */
+.contact-panel {
+  background: #0b1738;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.contact-panel .label {
+  color: #7b86bb;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+
+.contact-panel .email {
+  color: #eef2ff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.social-list {
+  list-style: none;
+}
+
+.social-list li {
+  background: #0b1738;
+  border: 1px solid rgba(176, 199, 255, 0.16);
+  border-radius: 10px;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.social-list li::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.social-list li a {
+  float: left;
+  color: #eef2ff;
+  font-weight: bold;
+}
+
+.social-list li a:hover {
+  color: #b0c7ff;
+}
+
+.social-list li span.tag {
+  float: right;
+  color: #7b86bb;
+  font-size: 0.8rem;
+}
+
+/* ===== Responsive fallback: stack floats on small screens ===== */
+@media (max-width: 640px) {
+  .profile-photo,
+  .hobby-card,
+  .skill-card,
+  .gallery-item,
+  .quicklinks a {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+  nav .brand,
+  nav ul {
+    float: none;
+    display: block;
+  }
+  nav ul li {
+    float: left;
+    margin: 0 1rem 0.5rem 0;
+  }
+}
